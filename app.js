@@ -7,11 +7,13 @@ const verifyDomains = (arr) => {
 
     let url = "https://www." + domain + extension;
     request(url, (err, res) => {
+
       if (err) {
         console.log(url + " => Error!", err);
       } else {
         console.log(url + " => OK!");
       }
+
     });
 
   });
