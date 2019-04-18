@@ -3,6 +3,7 @@ const domains = require ('./data.js');
 const request = require('request');
 
 for (let i = 0; i < domains.length; i++) {
+
   let url = "https://www." + domains[i] + extension;
   request(url, (err, res) => {
     if (err) {
@@ -11,4 +12,5 @@ for (let i = 0; i < domains.length; i++) {
       console.log(url + " => OK!");
     }
     });
+
 };
